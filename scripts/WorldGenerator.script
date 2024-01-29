@@ -1,0 +1,19 @@
+go.property('size', 30)
+
+function init(self)
+	count = 0
+	for x = 0, self.size do
+		for y = -5, 1 do
+			count = count + 1
+			print(count .. " " .. x .. " " .. y)
+			local position = go.get_position()
+			position.x = x * 32
+			position.y = y * 32
+			factory.create('#dirt_factory', position)
+		end
+	end
+end
+
+function GenerateNewRow(x) 
+	
+end

@@ -1,0 +1,36 @@
+key_trigger {
+  input: KEY_A
+  action: "Left"
+}
+key_trigger {
+  input: KEY_D
+  action: "Right"
+}
+key_trigger {
+  input: KEY_SPACE
+  action: "Jump"
+}
+key_trigger {
+  input: KEY_S
+  action: "ReadyDig"
+}
+key_trigger {
+  input: KEY_F
+  action: "Dig"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "touch"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_LEFT
+  action: "Left"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_RIGHT
+  action: "Right"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_LEFT
+  action: ""
+}

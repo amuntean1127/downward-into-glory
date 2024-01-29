@@ -1,0 +1,33 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	sprite.set_hflip('#sprite', true)
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+
+	if action_id == hash("Right") or action_id == hash("Left") then
+		if action.pressed then
+			sprite.play_flipbook('#sprite', 'Dwarf_Walk_Left')
+		elseif action.released then 
+			sprite.play_flipbook('#sprite', 'Dwarf_Idle')
+		end
+	end
+	
+	local position = go.get_position()
+		
+	if action_id == hash("Right") then
+		sprite.set_hflip('#sprite', true)
+		position.x = position.x + 1
+	elseif action_id == hash("Left") then
+		sprite.set_hflip('#sprite', false)
+		position.x = position.x - 1
+	end
+
+	go.set_position(position)
+end
